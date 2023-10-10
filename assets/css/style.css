@@ -1,0 +1,519 @@
+html, body {
+  width: 1000vw;
+  height: 100vh;
+  margin: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(50, 1fr); /* 20 columns */
+  grid-gap: 10px;
+  row-gap: 20px;
+  grid-template-rows: repeat(50, 1fr); /* 30 rows */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13pt;
+}
+
+.text-a {
+  background-color: green;
+  grid-column: 1 / -1; /* Span all 20 columns */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: fixed; /* Fix the position */
+  bottom: 0; /* Stick to the bottom */
+  width: 100%; /* Full width */
+}
+
+.text-b {
+  background-color: red;
+  grid-column: 27 / 30; /* Span all 20 columns */
+  grid-row: 27 / 28; /* Center vertically */
+  justify-content:first baseline; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center;
+  justify-self: baseline;
+  display: flex; /* Use flexbox to center content */
+}
+
+.text-c {
+  background-color: yellow;
+    grid-column: 27 / 30; /* Span the same columns as text-b */
+    grid-row: 28; /* Place text-c underneath text-b */
+    justify-items:end;
+    text-align: center;
+    align-items: center; /* Center vertically */
+  }
+
+.header-1{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 100pt;
+  font-style: italic;
+  opacity: 20%;
+  grid-column: 5/7;
+  grid-row: 3;
+}
+
+.header-2{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 100pt;
+  font-style: italic;
+  opacity: 20%;
+  grid-column: 44/47;
+  grid-row: 40;
+}
+
+  .fact-1 {
+    background-color: rgb(30, 0, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20pt;
+    color: white;
+    grid-column: 11 / 12; /* Span the same columns as text-b */
+    grid-row: 7 / 8; /* Place text-c underneath text-b */
+    justify-content:baseline;
+    justify-items:baseline;
+    align-items: center; /* Center vertically */
+  }
+
+  .fact-2 {
+    background-color: rgb(30, 0, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20pt;
+    color: white;
+    grid-column: 49 / 50; /* Span the same columns as text-b */
+    grid-row: 22 / 23; /* Place text-c underneath text-b */
+    justify-content:baseline;
+    justify-items:baseline;
+    align-items: center; /* Center vertically */
+  }
+
+  .fact-3 {
+    background-color: rgb(30, 0, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20pt;
+    color: white;
+    grid-column: 21 / 24; /* Span the same columns as text-b */
+    grid-row: 29 / 30; /* Place text-c underneath text-b */
+    justify-content:baseline;
+    justify-items:baseline;
+    align-items: center; /* Center vertically */
+  }
+
+  .fact-4 {
+    background-color: rgb(30, 0, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20pt;
+    color: white;
+    grid-column: 37 / 39; /* Span the same columns as text-b */
+    grid-row: 29 / 30; /* Place text-c underneath text-b */
+    justify-content:baseline;
+    justify-items:baseline;
+    align-items: center; /* Center vertically */
+  }
+
+  .fact-5 {
+    /* background-color: rgb(30, 0, 255); */
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20pt;
+    color: rgb(0, 0, 0);
+    grid-column: 41 / 42; /* Span the same columns as text-b */
+    grid-row: 29 / 30; /* Place text-c underneath text-b */
+    justify-content:baseline;
+    justify-items:baseline;
+    align-items: center; /* Center vertically */
+  }
+
+  .fact-6 {
+    background-color: rgb(30, 0, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20pt;
+    color: white;
+    grid-column: 42 / 43; /* Span the same columns as text-b */
+    grid-row: 18 / 19; /* Place text-c underneath text-b */
+    justify-content:baseline;
+    justify-items:baseline;
+    align-items: center; /* Center vertically */
+  }
+
+  .fact-7 {
+    background-color: rgb(30, 0, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20pt;
+    color: white;
+    grid-column: 2 / 4; /* Span the same columns as text-b */
+    grid-row: 40 / 41; /* Place text-c underneath text-b */
+    justify-content:baseline;
+    justify-items:baseline;
+    align-items: center; /* Center vertically */
+  }
+
+  .fact-8 {
+    background-color: rgb(30, 0, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20pt;
+    color: white;
+    grid-column: 31 / 33; /* Span the same columns as text-b */
+    grid-row: 9 / 11; /* Place text-c underneath text-b */
+    justify-content:baseline;
+    justify-items:baseline;
+    align-items: center; /* Center vertically */
+  }
+
+
+
+[class^="item-"] {
+  list-style: circle;
+  background-color: magenta;
+  grid-column: auto;
+  transition: background-color 0.3s;
+}
+
+[class^="item-"]:hover {
+  background-color: blue;
+}
+
+.item-1 {
+  position: relative;
+  background-color: magenta;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.item-2 {
+  grid-row: 8 / span 1;
+  grid-column: 6 / span 1;
+}
+
+.item-3 {
+  grid-row: 12 / span 1;
+  grid-column: 9 / span 1;
+}
+
+.item-4 {
+  grid-row: 18 / span 1;
+  grid-column: 2 / span 1;
+}
+
+.item-5 {
+  grid-row: 30 / span 1;
+  grid-column: 9 / span 1;
+}
+
+.item-6 {
+  grid-row: 21 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.item-7 {
+  grid-row: 24 / span 1;
+  grid-column: 13 / span 1;
+}
+
+.item-8 {
+  grid-row: 23 / span 1;
+  grid-column: 10 / span 1;
+}
+
+.item- {
+  grid-row: 15 / span 1;
+  grid-column: 23 / span 1;
+}
+
+.item-9 {
+  grid-row: 4 / span 1;
+  grid-column: 19 / span 1;
+}
+
+.item-10 {
+  grid-row: 48 / span 1;
+  grid-column: 12 / span 1;
+}
+
+.item-11 {
+  grid-row: 36 / span 1;
+  grid-column: 32 / span 1;
+}
+
+.item-12 {
+  grid-row: 41 / span 1;
+  grid-column: 38 / span 1;
+}
+
+.item-13 {
+  grid-row: 2 / span 1;
+  grid-column: 3 / span 1;
+}
+
+.item-14 {
+  grid-row: 28 / span 1;
+  grid-column: 16 / span 1;
+}
+
+.item-15 {
+  grid-row: 2 / span 1;
+  grid-column: 30 / span 1;
+}
+
+.item-16 {
+  grid-row: 36 / span 1;
+  grid-column: 27 / span 1;
+}
+
+.item-17 {
+  grid-row: 48 / span 1;
+  grid-column: 2 / span 1;
+}
+
+.item-18 {
+  grid-row: 31 / span 1;
+  grid-column: 34 / span 1;
+}
+
+.item-19 {
+  grid-row: 40 / span 1;
+  grid-column: 40 / span 1;
+}
+
+.item-3 {
+  grid-row: 12 / span 1;
+  grid-column: 12 / span 1;
+}
+
+.item-20 {
+  grid-row: 16 / span 1;
+  grid-column: 39 / span 1;
+}
+
+.item-21 {
+  grid-row: 34 / span 1;
+  grid-column: 24 / span 1;
+}
+
+.item-22 {
+  grid-row: 38 / span 1;
+  grid-column: 16 / span 1;
+}
+
+.item-23 {
+  grid-row: 41 / span 1;
+  grid-column: 29 / span 1;
+}
+
+.item-24 {
+  grid-row: 11 / span 1;
+  grid-column: 29 / span 1;
+}
+
+.item-25 {
+  grid-row: 50 / span 1;
+  grid-column: 47 / span 1;
+}
+
+.item-26 {
+  grid-row: 19 / span 1;
+  grid-column: 41 / span 1;
+}
+
+.item-27 {
+  grid-row: 14 / span 1;
+  grid-column: 33 / span 1;
+}
+
+.item-28 {
+  grid-row: 23 / span 1;
+  grid-column: 10 / span 1;
+}
+
+.item-29 {
+  grid-row: 15 / span 1;
+  grid-column: 28 / span 1;
+}
+
+.item-30 {
+  grid-row: 4 / span 1;
+  grid-column: 31 / span 1;
+}
+
+.item-31 {
+  grid-row: 42 / span 1;
+  grid-column: 32 / span 1;
+}
+
+.item-32 {
+  grid-row: 34 / span 1;
+  grid-column: 38 / span 1;
+}
+
+.item-33 {
+  grid-row: 15 / span 1;
+  grid-column: 38 / span 1;
+}
+
+.item-34 {
+  grid-row: 20 / span 1;
+  grid-column: 3 / span 1;
+}
+
+.item-35 {
+  grid-row: 6 / span 1;
+  grid-column: 16 / span 1;
+}
+
+.item-36 {
+  grid-row: 42 / span 1;
+  grid-column: 30 / span 1;
+}
+
+.item-37 {
+  grid-row: 36 / span 1;
+  grid-column: 27 / span 1;
+}
+
+.item-38 {
+  grid-row: 48 / span 1;
+  grid-column: 2 / span 1;
+}
+
+.item-39 {
+  grid-row: 31 / span 1;
+  grid-column: 34 / span 1;
+}
+
+.item-40 {
+  grid-row: 40 / span 1;
+  grid-column: 40 / span 1;
+}
+
+.item-41 {
+  grid-row: 12 / span 1;
+  grid-column: 12 / span 1;
+}
+
+.item-42 {
+  grid-row: 16 / span 1;
+  grid-column: 39 / span 1;
+}
+
+.hover-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(255, 0, 0);
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Show the hover content when hovering over .item-1 */
+.item-1:hover .hover-content {
+  display: block;
+}
+
+/* Adjust the size of the image within the hover content */
+.item-1:hover .hover-content img {
+  width: 50%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Show the hover content when hovering over .item-1 */
+.item-2:hover .hover-content {
+  display: block;
+}
+
+/* Adjust the size of the image within the hover content */
+.item-2:hover .hover-content img {
+  width: 50%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Show the hover content when hovering over .item-1 */
+.item-3:hover .hover-content {
+  display: block;
+}
+
+/* Adjust the size of the image within the hover content */
+.item-3:hover .hover-content img {
+  width: 50%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Show the hover content when hovering over .item-1 */
+.item-4:hover .hover-content {
+  display: block;
+}
+
+/* Adjust the size of the image within the hover content */
+.item-4:hover .hover-content img {
+  width: 50%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+
+
+
+/* Assign grid areas to the container */
+.grid-container {
+  grid-template-areas:
+    "header header header header header header header header header header header header header header header header header header header header"
+    "text-b text-b text-b text-b text-b text-b text-c text-c text-c text-c text-c text-c text-c text-c text-c text-c text-c text-c text-c text-c"
+    /* Add more row definitions as needed */
+    "item-1 item-2 item-3 item-4 item-5 item-6 item-7 item-8 item-9 item-10 item-11 item-12 item-13 item-14 item-15 item-16 item-17 item-18 item-19 item-20"
+    /* Add more row definitions as needed */
+    /* Repeat the row definitions for all rows */
+    ;
+}
+
+
+
+
+
+
+
+
+
+/* .random-list {
+  grid-column: span 2;
+  grid-row: 2 / 3;
+} */
+
+       
+#canvas {
+  margin: 0;
+  border: 1px solid #ccc;
+
+  width: 100vw;
+  height: 100vh;
+} 
+
+ /* @keyframes animateFont { 
+  0% {
+    font-variation-settings: "THCK" 100; 
+  }
+  50% {
+    font-variation-settings: "THCK" 500; 
+  }
+  100% {
+    font-variation-settings: "THCK" 800; 
+  }
+animated-text {
+  font-family: 'Fungal', sans-serif;
+  animation: animateFont 10s linear infinite; 
+} 
+
+my-text {
+
+	font-variation-settings: "THCK" 814.8952, "grow" 733.3333;
+}
+ } */

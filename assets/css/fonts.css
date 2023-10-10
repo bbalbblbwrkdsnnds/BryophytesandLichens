@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "FungalVF";
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+  src: url("../fonts/FungalVF.woff") format("woff"), url("../fonts/FungalVF.woff2") format("woff2");
+}
